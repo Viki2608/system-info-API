@@ -54,6 +54,8 @@ This apllication uses flask API to insert system information into Database
 Database Used : POSTGRES
 ORM Used : Sqlalchemy
 Sample payload :
+```
 {"platform": "Windows", "Manufacturer": "HP", "Model": "HP Pavilion Gaming Laptop 15-ec0xxx", "Number Of Processors": 1, "SystemType": "x64-based PC", "SystemFamily": "103C_5335KV HP Pavilion", "architecture": "AMD64", "hostname": "LAPTOP-BID5GQNK", "ip-address": "172.26.176.2", "mac-address": "5c:3a:45:65:16:46", "processor": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD", "cpu cores": 8, "cpu usage": 30.7, "Total disk space": 231, "Used disk space": 146, "Available disk space": 84, "system up time": "3:20:49", "Total ram": 6, "Available ram": 1, "CORE_1": 25, "CORE_2": 16, "CORE_3": 50, "CORE_4": 8, "CORE_5": 41, "CORE_6": 58, "CORE_7": 33, "CORE_8": 8}
+```
 Payload type : application/json
 ==NOTE : == Please use system_info_generator.py in the root directory to generate your own system information.
