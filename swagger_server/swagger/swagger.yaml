@@ -1,0 +1,82 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a System Info API . It Gets system information from local\
+    \ computer and persist it into Database."
+  version: "1.0.0"
+  title: "Systeminfo API"
+  contact:
+    email: "vignesh26.manoharan@gmail.com"
+schemes:
+- "https"
+- "http"
+paths:
+  /systeminfo:
+    post:
+      tags:
+      - "Systeminfo"
+      summary: "adds new system info"
+      description: "Add a new system information to Database"
+      operationId: "systeminfo_webhook"
+      consumes:
+      - "application/json"
+      produces:
+      - "text/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success"
+        "400":
+          description: "Bad request"
+      x-swagger-router-controller: "swagger_server.controllers.systeminfo_controller"
+definitions: {}
+    # Systeminfo:
+    #   type: "object"
+    #   properties:
+    #     hostname:
+    #       type: "string"
+    #     ip-address:
+    #       type: "string"
+    #     mac-address:
+    #       type: "string"
+    #     platform:
+    #       type: "string"
+    #     Model:
+    #       type: "string"
+    #     cpu cores:
+    #       type: "integer"
+    #     operating system:
+    #       type: "string"
+    #     system architecture:
+    #       type: "string"
+    #     Total disk space:
+    #       type: "integer"
+    #     Used disk space:
+    #       type: "integer"
+    #     Available disk space:
+    #       type: "integer"
+    #     system up time:
+    #       type: "string"
+    #     Total ram:
+    #       type: "integer"
+    #     Available ram:
+    #       type: "integer"
+    #     # example:
+    #     #   ip-address: "172.26.176.1/32"
+    #     #   mac-address: "5c:3a:45:65:16:46"
+    #     #   os: "Windows"
+    #     #   Manufacturer : "HP"
+    #     #   hostname: "LAPTOP-BID5GQNK"
+    #     #   no_of_processors : 1
+    #     #   systemtype : "AMD64"
+    #     #   cpu_usage : 30.7
+    #     #   cpu cores: 1
+    #     #   total_diskspace : 231
+    #     #   used_diskspace : 146 
+    #     #   available_diskspace : 84 
+    #     #   total_ram: 6
+    #     #   available_ram: 2
+    #     #   system_up_time: "3:20:49"          
+    #     #   Model: "HP Pavilion Gaming Laptop 15-ec0xxx"
+     
+ 
