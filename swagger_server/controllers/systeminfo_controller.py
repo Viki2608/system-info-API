@@ -2,12 +2,12 @@ import connexion
 from typing import Tuple
 from http import HTTPStatus
 
-from swagger_server.util import util
+from swagger_server.utils import util
 from sqlalchemy_utils import database_exists, create_database
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-from swagger_server.util.system_info_utils import *
+from swagger_server.utils.system_info_utils import *
 
 
 def systeminfo_webhook():  # noqa: E501

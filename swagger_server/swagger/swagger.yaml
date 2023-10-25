@@ -29,6 +29,28 @@ paths:
         "400":
           description: "Bad request"
       x-swagger-router-controller: "swagger_server.controllers.systeminfo_controller"
+
+  /playbook_enforcement:
+    post:
+      tags:
+          - DynaFloMetrics
+      operationId: playbook_enforcement_webhook
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: file
+          in: formData
+          type: file
+          required: true
+      responses:
+        200:
+          description: Successfully processed file
+        400:
+          description: Invalid file format or missing parameters
+        500:
+          description: Internal error occurred
+      x-swagger-router-controller: swagger_server.controllers.playbook_enforcement_controller
+
 definitions: {}
     # Systeminfo:
     #   type: "object"
